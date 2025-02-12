@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorryy</title>
+    <link rel="stylesheet" href="bootstrap.min.css"> <!-- assuming you have Bootstrap CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="text/javascript"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(235, 235, 235);
+        }
+
+        #btn-unclicked {
+            position: absolute;
+            transition: .3s;
+            padding: 10px;
+            height: 40px;
+            width: 150px;
+        }
+
+        #btn-unclicked-sec {
+            position: absolute;
+            transition: .3s;
+            padding: 10px;
+            height: 40px;
+            width: 150px;
+        }
+
+        #btn-unclicked-third {
+            position: absolute;
+            transition: .3s;
+            padding: 10px;
+            height: 40px;
+            width: 250px;
+        }
+
+        .noDisp {
+            display: none;
+        }
+
+        .marginTop {
+            margin-top: 50px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="container text-center">
+            <div id="first">
+                
+                <img class="yes-first" src="box.gif" alt="GIF" style="max-width: 100%;">
+                
+            </div>
+            <div id="sec" class="noDisp">
+                <video width="400" controls autoplay loop>
+                    <source src="ui.mp4" type="video/mp4">
+                </video>
+                
+            </div>
+
+                
+    <script src="bootstrap.bundle.min.js"></script>
+    <script>
+        
+        
+
+        const yesFirst = document.querySelector(".yes-first");
+        const first = document.getElementById("first");
+        const sec = document.getElementById("sec");
+
+        yesFirst.addEventListener('click', function() {
+            first.classList.add("noDisp");
+            sec.classList.remove("noDisp");
+
+            const video = document.querySelector("video");
+            video.play();
+        })
+
+
+
+    </script>
+</body>
+</html>
